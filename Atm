@@ -1,0 +1,120 @@
+print("===============================")
+print("welcome to our 🏧")
+
+
+
+user={'pin':8523,'balance':10000}
+ 
+
+#------++++---
+def pinchange():
+  newpin=int(input("enter new pin🆕:"))
+  user[ 'pin']=newpin
+  print("your pin changed succesfully ",newpin) 
+  print("==============================")
+  
+  choice()
+#---------------------;-;-
+def deposite():
+ amount=int(input("enter amount want to deposite💵💵:"))
+ 
+ user['balance']=user['balance']+ amount
+ print ("tranasction is succesfull of deposite",amount,"reamini balance💸",user['balance'],'🙂')
+ print("=============================")
+ choice()
+  
+#---------------------------------------
+def withdraw():
+ amount=int(input("enter amount want to withdraw:"))
+ if(amount>user['balance']):
+  print("insufficiant fund🥹")
+  print("======================")
+  choice()
+ else:
+  user['balance']=user['balance']-amount
+  print ("tranasction is succesfull of withdrawl",amount,"reamini balance",user['balance'],'🙂')
+  print("==============================")
+  choice()
+#--------------------------
+def choice():
+  choose=int(input ("▶️1. transaction.         ◀️ 2 exit:"))
+  print("=======================")
+  if(choose==1):
+    transaction ()
+  else:
+    exit()
+ 
+#----_-------------
+def exit():
+    print("=============================")
+    print(" 🙏THANK YOU FOR VISITING OUR🏧")
+    print("        KEEP SMILE 😊")
+    print("==========================")
+#------++
+def balance():
+ print("your account balance is ",user['balance'],"rs")
+ print("=============================")
+ choice ()
+#----------------------------------------
+def transaction ():
+ print("please choose traansaction:")
+ print("▶️1.withdraw       ◀️3.deposite")
+ print("▶️2.balanceenquiry ◀️4.pinchange")
+ print("============================")
+ select=int(input("choose any transaction:"))
+ print("==============================")
+ if(select==1):
+  withdraw ()
+ elif(select==2):
+  balance ()
+ elif (select==3):
+  deposite()
+ else:
+     pinchange()
+     print("timeout")
+  
+ 
+ 
+#--------------------------------
+
+def failed():
+    for i in range (3):
+       print("ur entered wrong pin:")
+       print ("u have only 2 chances left")
+       
+       num=int(input("enter pin:"))
+       
+       print("===============================")
+#------------------------------------------------
+       if(num==user['pin']):
+        transaction()
+        break
+       else:
+           print("ur entered wrong pin:")
+           print ("u have only 1 chance l left")
+       
+           num=int(input("enter pin:"))
+       
+           print("===============================")
+           if(num==user['pin']):
+              transaction()
+              break
+           else:
+               print ("your account is blocked")
+               exit()
+               break
+
+           
+ 
+ 
+#-------------------------------&---------------
+
+num=int(input("enter pin:"))
+print("===============================")
+#------------------------------------------------
+if(num==user['pin']):
+ transaction()
+
+else:
+ failed()
+ 
