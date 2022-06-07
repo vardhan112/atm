@@ -1,0 +1,44 @@
+body{
+    background-image: url(win-10-wallpaper-images-the-best-windows-10-wallpaper-picture-1-a9wuvPHyN.jpg);
+    background-color: black;
+    font-style: italic;
+    font: bold;
+    display: inline;
+    font-size: 20px;
+    
+    
+    align: center;
+    
+}
+p{
+    align-content: center;
+    text-align: center;
+    font-size: 50px;
+}
+form{
+    align-items: center;
+    
+    align:center;
+    width: 200px;
+    height: 200px;
+    align-content: center;
+    text-align: center;
+    
+    margin-top: 300px;
+    margin-left: 500px;
+    font-size: 30px;
+}
+
+input{
+    font-size: 20px;
+    color:black;
+    background-color: brown';
+    cursor: pointer;
+}
+#image{
+    font-size: 30px;
+}
+script{
+    max-width: 100px;
+
+}
